@@ -63,4 +63,21 @@ describe('files.js', function() {
       new DirClass('1.10'),
       new DirClass('1.11')])
   })
+
+  it('test sort dot separated digit markdown files', () => {
+    const order = [
+      new DirClass('1.1.md'),
+      new DirClass('1.10.md'),
+      new DirClass('1.11.md'),
+      new DirClass('1.2.md')]
+    const sorted = order.sort((current, next) => {
+      return sort(current, next, '.')
+    })
+
+    should.deepEqual(sorted, [
+      new DirClass('1.1.md'),
+      new DirClass('1.2.md'),
+      new DirClass('1.10.md'),
+      new DirClass('1.11.md')])
+  })
 })
