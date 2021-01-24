@@ -3,7 +3,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "A CLI to generate  a summary from a given folder.",
   "homepage": "http://imfly.github.io/gitbook-summary/",
   "bin": {
